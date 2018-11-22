@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: 
+Allow: /obliged-shelters.000webhostapp.com/index.html
+Allow: /obliged-shelters.000webhostapp.com/strana2.html
+Allow: /obliged-shelters.000webhostapp.com/strana3.html
+Allow: /obliged-shelters.000webhostapp.com/strana5.html
+
+Sitemap: http://obliged-shelters.000webhostapp.com/sitemap.xml

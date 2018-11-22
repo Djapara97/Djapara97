@@ -1,0 +1,180 @@
+<!DOCTYPE HTML SYSTEM>
+<html>
+<head>
+<title>Kafe Restoran Masa|Kuvar|Kulinarstvo|Restoran|Predsednik</title>
+<link rel="stylesheet" href="stil.css">
+<link rel="icon" type="image/x-icon" href="images/03.jpg" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kafe restoran Masa je poznat po visokom kvalitetu kuhinje, vrsi dostavu hrane i pica, kao i poslastica. Posetite nas i uzivajte hrani koju sprema nas kuvar Ciric !">
+<meta name="keywords" content="restoran, kafe, bar, kuhinja, poslastice, kolaci, glavna jela, supe, corbe, dostava, jelovnik ">
+<meta name="author" content="Sladja Novakovic">
+</head>
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-90186602-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<div class="meni">
+		<ul>
+			<li><a href ="index.html">Početna</a></li>
+			<li><a href ="strana2.html">Jelovnik</a></li>	
+			<li><a href ="strana3.html">Piće</a></li>
+			<li><a href ="strana5.html">Dostava</a></li>
+			<li><button type="button" onClick="Nagrada()">Akcija</button></li>
+			<li><button type="button" onClick="Vreme()">Trenutno vreme</button><br><br></li>
+			
+		</ul>
+</div>
+
+	<script type="text/javascript">
+	function Nagrada(){
+	var score=0;
+	
+	var pitanje = [
+	 ['Koliko jela sa morskim plodovima imamo u ponudi?', 2],
+	 ['Koliko ukupno imamo jela u ponudi?', 12],
+	 ['Koliko svetskih zlatnih medalja je osvoji nas sef kuhinje?', 2]
+	];
+	
+	function postaviPitanje(pitanje) {
+	 var poziv = prompt(pitanje[0],'');
+		if (poziv == pitanje[1]) {
+			alert('ODLICNO!');
+			score++;
+		} else {
+			alert('Nije tacno!' + pitanje[1]);
+		}
+	}
+	for (var i=0; i<pitanje.length; i++) {
+	 postaviPitanje(pitanje[i]);
+	}
+	alert("Cestitamo! Osvojili ste besplatan obrok!")	
+	}
+	
+	
+		function Ponisti()
+		{
+			document.getElementById("ime").value="";
+			document.getElementById("prezime").value="";
+			document.getElementById("mesto").value="";
+			document.getElementById("adresa").value="";
+			document.getElementById("email").value="";
+			document.getElementById("telefon").value="";
+		}
+	
+	
+		function Ispis()
+		{
+			var ime = document.form.ime.value;
+			var prezime = document.form.prezime.value;
+			var mesto = document.form.mesto.value;
+			var adresa = document.form.adresa.value;
+			var email = document.form.email.value;
+			var telefon = document.form.telefon.value;
+			
+			if (ime=="" || prezime=="" || mesto=="" || adresa=="" || email=="" || telefon=="")
+			{
+				alert("Morate popuniti sva polja!");
+			}
+			
+			else
+			{
+				var izbor = document.form.porudzbina.selectedIndex;
+				var p = document.form.porudzbina[izbor].text;
+				var ispisp = document.getElementById("paragraf");
+				
+				ispisp.innerHTML="Ime: "+ime+"</br>Prezime:"+prezime+"</br>Mesto:"+mesto+
+				"</br>Adresa:"+adresa+"</br>E-mail:"+email+"</br>Telefon:"+telefon+"</br>Poručujete:"+p+"</br></br>"
+			}
+		}
+	
+		function Poruci()
+		{
+			var ime = document.form.ime.value;
+			var prezime = document.form.prezime.value;
+			var mesto = document.form.mesto.value;
+			var adresa = document.form.adresa.value;
+			var email = document.form.email.value;
+			var telefon = document.form.telefon.value;
+		if (ime=="" || prezime=="" || mesto=="" || adresa=="" || email=="" || telefon=="")
+			{
+				alert("Morate popuniti sva polja!");
+			}
+			else
+			alert("Vaša porudžbina je uspešno izvršena. Hvala Vam što se hranite kod nas :)")
+		}
+	
+	function Vreme(){
+            
+            var trenutno = new Date();
+            var sati = trenutno.getHours();
+            var minuti = trenutno.getMinutes();
+            var sekunde = trenutno.getSeconds();
+            document.write(sati + ":" + minuti + ":" + sekunde + "<br>");
+			
+			setInterval("Vreme()", 1000);
+}
+	
+
+	</script>
+	
+	
+<div class="kontejner">
+<div class="porucivanje">
+<form name="form" class="form">
+<label>Ime:</label></br>
+<input type="text" name="ime" id="ime" placeholder="Ime"></input> </br></br>
+<label>Prezime:</label><br>
+<input type="text" name="prezime" id="prezime" placeholder="Prezime"></input> </br></br>
+<label>Mesto:</label></br>
+<input type="text" name="mesto" id="mesto"placeholder="Grad"> </input></br></br>
+<label>Adresa:</label></br>
+<input type="text" name="adresa"  id="adresa" placeholder="Adresa"></input> </br></br>
+<label>E-mail:</label></br>
+<input type="text" name="email" id="email"placeholder="primer@gmail.com"> </input></br></br>
+<label>Kontakt telefon:</label></br>
+<input type="text" name="telefon"  id="telefon" placeholder="Telefon"></input> </br></br></br>
+
+<label>Molimo izaberite Vašu porudžbinu:</label><br><br>
+<select name="porudzbina" onChange="Ispis()">
+        <option> </option>
+        <option selected>Lignje na zaru</option>
+        <option>Oraga na grilu</option>
+        <option>Most</option>
+        <option>Palacinka Zambezi</option>
+		<option>Piletina sa prelivom od prsute</option>
+        <option>Punjeni svinjski file</option>
+        <option>Pileci raznjici</option>
+		<option>Rizoto</option>
+        <option>Bolonjeze</option>
+        <option>Seviljski valjak</option>
+        <option>Teleca ragu corba</option>
+        <option>Potaz od brokolija</option>
+</select>
+
+</br></br>
+
+
+<input type="button" value="Naruci" onClick="Ispis()"></input>
+<input type="Reset" value="Ponisti" onClick="Ponisti()"></input></form>
+
+
+
+<div class="potvrda">
+</br>
+<p id="paragraf">Ovde ce biti ispisani Vaši podaci za potvrdu porudžbine.</p>
+<form>
+<input type="button" value="Potvrda" onClick="Poruci()"> </input> &nbsp;&nbsp;&nbsp;
+</form>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

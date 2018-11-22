@@ -1,0 +1,103 @@
+<!DOCTYPE HTML SYSTEM>
+<html>
+<head>
+<title>Kafe Restoran Masa|Kuvar|Kulinarstvo|Restoran|Predsednik</title>
+<link rel="stylesheet" href="stil.css">
+<link rel="icon" type="image/x-icon" href="images/03.jpg" />
+<meta content="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kafe restoran Masa je poznat po visokom kvalitetu kuhinje, vrsi dostavu hrane i pica, kao i poslastica. Posetite nas i uzivajte hrani koju sprema nas kuvar Ciric !">
+<meta name="keywords" content="restoran, kafe, bar, kuhinja, poslastice, kolaci, glavna jela, supe, corbe, dostava, jelovnik ">
+<meta name="author" content="Sladja Novakovic">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-90186602-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Ma%C5%A1a/209089535789018?fref=ts" data-width="500px" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+<div class="meni">
+		<ul>
+			<li><a href ="index.html">Početna</a></li>
+			<li><a href ="strana2.html">Jelovnik</a></li>	
+			<li><a href ="strana3.html">Piće</a></li>
+			<li><a href ="strana5.html">Dostava</a></li>
+		</ul>
+	<div>
+		<img src="img/jin.jpg" id="slide" alt="restoran" name="slide" width="100px" height="100px" >
+	</div>
+</div>
+	<div class="kontejner">
+		<div class="tekst">
+			<h1>Akcija</h1>
+			<h2> Specijaliteti kafe restorana  Masa u danasnjoj akciji </h2>
+			<p>Dragi kupci, pripremili smo vam specjalno iznenadjenje.
+			Uz svako poruceno jelo dobijate gratis poslasticu...
+			Akcija traje do kraja juna!!!</p>
+			<img src="img/jin.jpg" alt="restoran" onClick="window.location.href='strana4.html'" width="100px">
+			<img src="img/krempita.jpg" alt="kuhinja" onClick="window.location.href='strana4.html'" width="100px">
+			<img src="img/pita.jpg" alt="kulinarstvo" onClick="window.location.href='strana4.html'" width="100px">
+			<img src="img/ferero.jpg" alt="hrana" onClick="window.location.href='strana4.html'" width="100px">
+			<img src="img/tiramisu.jpg" alt="dezert" onClick="window.location.href='strana4.html'" width="100px">
+		</div>
+		<div class="sef">
+			<img src="img/sef.jpg" alt="kuvar">
+				<div class="s1">
+				<h1>Šef kuhinje-Boban Ćirić</h1>
+				<p>
+				Priznat je kuvar svetskog glasa i svaki njegov specijalitet je pravo umetničko delo.
+				"Kafe - Restoran Maša" se razlikuje i izdvaja od drugih ugostiteljskih objekata jer ima jedinstveni pečat. Jedan od njih je Boban Ćirić, šef kuhinje koji je napravio jelovnik koji prati ambijent celog kompleksa.
+				Ono što čini njegova jela posebnim jeste ekstravagancija.
+				Odlikuje ga sklop francuske i indijske kuhinje, prilagođen našem poneblju, sa vrhunskim izgledom i ukusom.
+				Boban Ćirić je osvojio dve svetske zlatne medalje.
+				Pobednik je na 7 evropskih, 13 balkanskih i preko 100 državnih takmičenja u kulinarstvu.
+				Nosilac je zvanja "Vitez kulinarstva".
+				Osnivač je i predsednik Karving asocijacije Srbije. "Karving je nova svetska disciplina u kulinarstvu", umetnost rezbarenja voća i povrća. Rezbarenjem voća i povrća umetnik stvara nestvarne dekoracije".
+				Počasni je predsednik Molekularne gastronomije Srbije.
+				Član je Moskovske Akademije Karving Mastera.
+				Autor je knjige "Kuvar za kuvare", koja se u Francuskoj i Belgiji koristi kao udžbenik.
+				</p>
+				</div>
+			</div>
+		</div>
+
+	<script type="text/javascript">
+	image1=new Image();
+	image1.src="img/jin.jpg";
+	var image2=new Image();
+	image2.src="img/krempita.jpg";
+	var image3=new Image();
+	image3.src="img/pita.jpg";
+	var image4=new Image();
+	image4.src="img/ferero.jpg";
+	var step=1;
+
+	function slideit(){
+		document.slide.src=eval("image"+step+".src");
+		if(step<4)
+			step++;
+		else
+			step=1;
+		setTimeout("slideit()",2500);
+	}
+</script>
+</body>
+
+
+</html>
